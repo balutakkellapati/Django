@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <style>
+            .border {
+                position: fixed;
+                top: 0;
+                left: 0;
+                border: 12px solid #000;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .parent {
+                display: table;
+                width: 100%;
+            }
+            .form_login {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>This is my first SIGNIN</title>
+    </head>
+    <div class="border">
+        <body>
+            <h1><center>LOGIN</center></h1>
+            <div align="center"><form action="/action_page.php">
+                EMAIL: <input type="text" name="usrname"><br>
+                PASSWORD: <input type="password" name="pwd" maxlength="8"><br>
+                <input type="submit" value="Submit">
+            </form></div>
+
+             {{ balu_signin }}
+        </body>
+    </div>
+</html>

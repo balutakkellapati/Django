@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        .column {
+            float: left;
+            width: 20%;
+            padding: 5px;
+        }
+        .col {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: black;
+            text-align: right;
+        }
+
+        .border {
+            position: fixed;
+            top: 0;
+            left: 0;
+            border: 12px solid #000;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 40px 60px;
+            cursor: pointer;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>This is my first website</title>
+</head>
+    <div class="border">
+        <body>
+            <div class = row>
+                <div class="column">
+                    <button class = button>HOME</button>
+                </div>
+                <div class="column">
+                    <button class = button>ABOUT</button>
+                </div>
+                <div class="column">
+                    <button class = button>GALLERY</button>
+                </div>
+                    <button class = button>LOGIN</button>
+                <div class="column">
+                    <button class = button>SIGNUP</button>
+                </div>
+            </div>
+            <div class=" row">
+                <div class="col">
+                    <h1><center>This is my first homepage</center> </h1>
+                </div>
+                <div class="col">
+                    <img style = "float: right; margin: 0px 50px 25px 15px;"src="{% static "images/my_image.jpg" %}" align = 'middle' height="350" width="350">
+                </div>
+            </div>
+            {{ balu_homepage }}
+            <div class="footer">
+                <p>CREATED BY:BALU</p>
+            </div>
+
+        </body>
+    </div>
+</html>
